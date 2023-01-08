@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ meta.lang or site.lang }}">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ site.title }} - {{ title or meta.title }}</title>
+
+  <link rel="stylesheet" href="{{ '/public/app.css' | url }}" />
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  {% include "templates/partials/meta.njk" %}
+</head>
+
+<body>
+  <!-- skiplinks -->
+  <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
+  {% include "templates/partials/navbar.njk" %}
+
+  <main id="main">
+    <div class="container py-4">
+      {% include "templates/partials/hero.njk" %}
+      {{ content | safe }}
+    </div>
+  </main>
+
+  <footer>
+    {% include "templates/partials/footer.njk" %}
+  </footer>
+
+  <script type="text/javascript" src="{{ '/public/app.js' | url }}"></script>
+</body>
+
+</html>
