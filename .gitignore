@@ -1,8 +1,13 @@
 /node_modules
+
 # eleventy output directory
-/_site
+/public
+
 # laravel mix output directory
-/dist
+/public
 /mix-manifest.json
+
 # eleventy-img output directory
 /img
+
+.DS_Store
